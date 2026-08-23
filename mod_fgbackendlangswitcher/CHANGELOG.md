@@ -4,6 +4,14 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the module, the companion plugin, or just
 the package infrastructure changed).
 
+## 1.2.13
+- Documentation: added a "Compatibility" note (README, and a description
+  on the "Display style" field in the module settings) explaining that
+  the dropdown style is visually tailored to Joomla's default Atum admin
+  template and may not look native in a third-party admin template — the
+  inline style (plain Bootstrap badges) is the safer choice there. No
+  functional code change.
+
 ## 1.2.12
 - **Rebrand.** Renamed to the FG series: element `mod_backendlangswitcher`
   → `mod_fgbackendlangswitcher`, namespace `Fero\Module\BackendLangSwitcher`

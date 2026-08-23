@@ -89,6 +89,16 @@ LangSwitcher**, filtered to Administrator) to adjust:
 | Icon CSS class | Any Joomla icon alias or Font Awesome class |
 | Save permanently to profile | Off by default (temporary/session-only) |
 
+## Compatibility
+
+The dropdown display style is visually styled to match Joomla's default
+**Atum** admin template (the "header-item-content" pill look shared with
+items like the user menu). It's untested with third-party/commercial
+admin templates — the module will still render and function, but the
+dropdown may not look native to a non-Atum template. The **inline**
+display style uses plain Bootstrap badges instead and is a safer choice
+outside Atum.
+
 ## Updates
 
 This extension ships with a Joomla update server
