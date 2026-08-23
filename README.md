@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/badge/license-GPL--2.0-blue" alt="License">
   <img src="https://img.shields.io/badge/Joomla-5%20%7C%206-red" alt="Joomla 5 | 6">
   <img src="https://img.shields.io/badge/PHP-8.1%2B-777bb4" alt="PHP 8.1+">
+  <img src="https://img.shields.io/github/downloads/ferino75/pkg_fgbackendlangswitcher/total?color=FF6B4A" alt="Downloads">
 </p>
 
 Lets every administrator switch their own backend (admin panel) language
