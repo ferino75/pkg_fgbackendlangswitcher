@@ -6,7 +6,7 @@
     <creationDate>2026-07</creationDate>
     <copyright>(C) 2026. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later</license>
-    <version>1.2.18</version>
+    <version>1.2.19</version>
     <description>FG Backend LangSwitcher: administrator module (UI) + system plugin (applies the temporary session language). Temporary switching by default, optional permanent saving to the user profile.</description>
 
     <scriptfile>script.php</scriptfile>

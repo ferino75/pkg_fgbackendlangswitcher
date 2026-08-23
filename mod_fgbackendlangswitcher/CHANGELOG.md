@@ -4,6 +4,15 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the module, the companion plugin, or just
 the package infrastructure changed).
 
+## 1.2.19
+- Documentation-only fix: the README version badge was a static,
+  manually-typed number (stuck at 1.2.12 since the initial rebrand —
+  never updated across 1.2.13–1.2.18). Replaced with a dynamic
+  shields.io GitHub Release badge
+  (`img.shields.io/github/v/release/...`) that reads the latest release
+  tag automatically, so it can't go stale again regardless of future
+  releases. No functional code change.
+
 ## 1.2.18
 - The "Default" switch confirmation message now also shows the resolved
   language tag (e.g. "Default (administrator setting) → en-GB"), using

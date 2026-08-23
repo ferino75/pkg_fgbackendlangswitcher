@@ -5,7 +5,7 @@
 <h1 align="center">FG Backend LangSwitcher</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.2.12-blue" alt="Version">
+  <img src="https://img.shields.io/github/v/release/ferino75/pkg_fgbackendlangswitcher?label=version" alt="Version">
   <img src="https://img.shields.io/badge/license-GPL--2.0-blue" alt="License">
   <img src="https://img.shields.io/badge/Joomla-5%20%7C%206-red" alt="Joomla 5 | 6">
   <img src="https://img.shields.io/badge/PHP-8.1%2B-777bb4" alt="PHP 8.1+">
