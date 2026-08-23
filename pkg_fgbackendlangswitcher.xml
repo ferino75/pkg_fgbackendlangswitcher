@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" method="upgrade">
+    <name>FG Backend LangSwitcher</name>
+    <packagename>fgbackendlangswitcher</packagename>
+    <author>Fero</author>
+    <creationDate>2026-07</creationDate>
+    <copyright>(C) 2026. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.2.12</version>
+    <description>FG Backend LangSwitcher: administrator module (UI) + system plugin (applies the temporary session language). Temporary switching by default, optional permanent saving to the user profile.</description>
+
+    <scriptfile>script.php</scriptfile>
+
+    <files folder="packages">
+        <file type="module" client="administrator" id="mod_fgbackendlangswitcher">mod_fgbackendlangswitcher.zip</file>
+        <file type="plugin" group="system" id="fgbackendlangswitcher">plg_system_fgbackendlangswitcher.zip</file>
+    </files>
+
+    <updateservers>
+        <server type="extension" priority="1" name="FG Backend LangSwitcher Updates">https://raw.githubusercontent.com/ferino75/pkg_fgbackendlangswitcher/master/updates.xml</server>
+    </updateservers>
+</extension>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="administrator" method="upgrade">
+    <name>MOD_FGBACKENDLANGSWITCHER</name>
+    <author>Fero</author>
+    <creationDate>2026-07</creationDate>
+    <copyright>(C) 2026. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.2.12</version>
+    <description>MOD_FGBACKENDLANGSWITCHER_XML_DESCRIPTION</description>
+
+    <namespace path="src">FG\Module\Fgbackendlangswitcher</namespace>
+
+    <files>
+        <folder module="mod_fgbackendlangswitcher">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/mod_fgbackendlangswitcher.ini</language>
+        <language tag="en-GB">en-GB/mod_fgbackendlangswitcher.sys.ini</language>
+        <language tag="sk-SK">sk-SK/mod_fgbackendlangswitcher.ini</language>
+        <language tag="sk-SK">sk-SK/mod_fgbackendlangswitcher.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="persist"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_FGBACKENDLANGSWITCHER_FIELD_PERSIST_LABEL"
+                    description="MOD_FGBACKENDLANGSWITCHER_FIELD_PERSIST_DESC"
+                    default="0"
+                    filter="integer"
+                    >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="style"
+                    type="list"
+                    label="MOD_FGBACKENDLANGSWITCHER_FIELD_STYLE_LABEL"
+                    default="dropdown"
+                    >
+                    <option value="dropdown">MOD_FGBACKENDLANGSWITCHER_FIELD_STYLE_DROPDOWN</option>
+                    <option value="inline">MOD_FGBACKENDLANGSWITCHER_FIELD_STYLE_INLINE</option>
+                </field>
+
+
+                <field
+                    name="icon"
+                    type="text"
+                    label="MOD_FGBACKENDLANGSWITCHER_FIELD_ICON_LABEL"
+                    description="MOD_FGBACKENDLANGSWITCHER_FIELD_ICON_DESC"
+                    default="icon-language"
+                />
+
+                <field
+                    name="shownative"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_FGBACKENDLANGSWITCHER_FIELD_SHOWNATIVE_LABEL"
+                    description="MOD_FGBACKENDLANGSWITCHER_FIELD_SHOWNATIVE_DESC"
+                    default="1"
+                    filter="integer"
+                    >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="showcode"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_FGBACKENDLANGSWITCHER_FIELD_SHOWCODE_LABEL"
+                    default="1"
+                    filter="integer"
+                    >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                    name="showdefault"
+                    type="radio"
+                    layout="joomla.form.field.radio.switcher"
+                    label="MOD_FGBACKENDLANGSWITCHER_FIELD_SHOWDEFAULT_LABEL"
+                    description="MOD_FGBACKENDLANGSWITCHER_FIELD_SHOWDEFAULT_DESC"
+                    default="1"
+                    filter="integer"
+                    >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    class="form-select"
+                    validate="moduleLayout"
+                />
+
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    rows="3"
+                    validate="CssIdentifier"
+                />
+
+                <!-- Modul spracúva vstup (prepnutie jazyka), cache musí byť vypnutá -->
+                <field
+                    name="cache"
+                    type="hidden"
+                    default="0"
+                    filter="integer"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_FGBACKENDLANGSWITCHER</name>
+    <author>Fero</author>
+    <creationDate>2026-07</creationDate>
+    <copyright>(C) 2026. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.2.12</version>
+    <description>PLG_SYSTEM_FGBACKENDLANGSWITCHER_XML_DESCRIPTION</description>
+
+    <namespace path="src">FG\Plugin\System\Fgbackendlangswitcher</namespace>
+
+    <scriptfile>script.php</scriptfile>
+
+    <files>
+        <folder plugin="fgbackendlangswitcher">services</folder>
+        <folder>src</folder>
+        <folder>language</folder>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/plg_system_fgbackendlangswitcher.ini</language>
+        <language tag="en-GB">en-GB/plg_system_fgbackendlangswitcher.sys.ini</language>
+        <language tag="sk-SK">sk-SK/plg_system_fgbackendlangswitcher.ini</language>
+        <language tag="sk-SK">sk-SK/plg_system_fgbackendlangswitcher.sys.ini</language>
+    </languages>
+</extension>
