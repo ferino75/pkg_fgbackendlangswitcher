@@ -7,6 +7,7 @@
 
 namespace FG\Plugin\System\Fgbackendlangswitcher\Extension;
 
+use Joomla\CMS\Component\ComponentHelper;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Language;
 use Joomla\CMS\Language\LanguageHelper;
@@ -76,8 +77,15 @@ final class Fgbackendlangswitcher extends CMSPlugin implements SubscriberInterfa
         // rozlíšenia by vymazanie session kľúča znamenalo len návrat k
         // admin_language z profilu používateľa (ak ho má nastavený), nie
         // k skutočnému predvolenému jazyku administrácie webu.
+        //
+        // $app->get('language') je LEN predvolený jazyk pre SITE (frontend)
+        // z configuration.php – Joomla má pre administráciu samostatné
+        // nastavenie (Systém → Spravovať → Jazyky → záložka Administrator →
+        // "Nastaviť ako predvolený"), uložené v parametroch com_languages.
+        // Tieto dve hodnoty sa môžu bežne líšiť.
         if ($tag === self::DEFAULT_MARKER) {
-            $tag = (string) $app->get('language');
+            $tag = (string) ComponentHelper::getParams('com_languages')
+                ->get('administrator', $app->get('language'));
         }
 
         // Jazyk medzičasom odinštalovaný? Uprac session a skonči.

@@ -4,6 +4,21 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the plugin, the module, or just the package
 infrastructure changed).
 
+## 1.2.16
+- **Important fix**: the "Default" option in **temporary** mode now
+  resolves to Joomla's actual administrator default language
+  (`ComponentHelper::getParams('com_languages')->get('administrator')`)
+  instead of `$app->get('language')`. The latter is only the *site*
+  (frontend) default language from `configuration.php` — Joomla lets you
+  set a separate default for the administrator client (System → Manage →
+  Languages → Administrator tab → "Set as Default"), and these two can
+  legitimately differ. On a site where they differ, choosing "Default"
+  while in temporary mode used to switch to the site's frontend default
+  instead of the actual administrator default. Permanent mode was never
+  affected — it just clears the profile's `admin_language`, and Joomla's
+  own bootstrap already reads the correct `administrator` param on its
+  own.
+
 ## 1.2.15
 - No plugin code change (version kept in sync with the package for the
   `<client>site</client>` fix in `updates.xml` — see the module's

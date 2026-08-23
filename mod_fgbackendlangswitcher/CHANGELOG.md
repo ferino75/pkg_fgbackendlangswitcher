@@ -4,6 +4,15 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the module, the companion plugin, or just
 the package infrastructure changed).
 
+## 1.2.16
+- Corrected the "Default" option's label text (was "Default (site
+  setting)", now "Default (administrator setting)") — it resets to
+  Joomla's administrator-client default language, not the site
+  (frontend) default, and the previous wording implied the wrong
+  source. See plg_system_fgbackendlangswitcher 1.2.16 for the matching
+  functional fix (temporary mode was actually resolving to the wrong
+  language).
+
 ## 1.2.15
 - Fixed the Joomla **update server** (`updates.xml`), not the extension
   code itself: added a missing `<client>site</client>` tag to the
