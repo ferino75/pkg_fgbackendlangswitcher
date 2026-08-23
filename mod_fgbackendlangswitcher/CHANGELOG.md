@@ -4,6 +4,13 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the module, the companion plugin, or just
 the package infrastructure changed).
 
+## 1.2.14
+- When saving `admin_language` to the profile fails, and Joomla's Debug
+  System (`$app->get('debug')`) is enabled, the enqueued error message
+  now also shows the specific exception/validation detail (already
+  logged since 1.1.9) — not just the generic message. Only shown when
+  debug mode is explicitly on, which the admin already opted into.
+
 ## 1.2.13
 - Documentation: added a "Compatibility" note (README, and a description
   on the "Display style" field in the module settings) explaining that

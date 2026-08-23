@@ -203,13 +203,25 @@ class FgbackendlangswitcherHelper
             }
 
             if (!$saved) {
+                $detail = $saveError ?? 'User::save() returned false (no exception, likely validation failure).';
+
                 $this->logError(\sprintf(
                     'Failed to save admin_language for user #%d: %s',
                     (int) $user->id,
-                    $saveError ?? 'User::save() returned false (no exception, likely validation failure).'
+                    $detail
                 ));
 
-                $app->enqueueMessage(Text::_('MOD_FGBACKENDLANGSWITCHER_ERROR_SAVE'), 'error');
+                $message = Text::_('MOD_FGBACKENDLANGSWITCHER_ERROR_SAVE');
+
+                // V debug režime (System → Global Configuration → Debug
+                // System) pridaj konkrétny detail priamo do hlásenia –
+                // administrátor si ho vedome zapol, takže vie, že sa
+                // zobrazujú diagnostické detaily.
+                if ($app->get('debug')) {
+                    $message .= ' ' . Text::sprintf('MOD_FGBACKENDLANGSWITCHER_ERROR_SAVE_DEBUG', $detail);
+                }
+
+                $app->enqueueMessage($message, 'error');
                 $this->redirectClean($app);
 
                 return;
