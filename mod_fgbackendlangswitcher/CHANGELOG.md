@@ -4,6 +4,19 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the module, the companion plugin, or just
 the package infrastructure changed).
 
+## 1.2.15
+- Fixed the Joomla **update server** (`updates.xml`), not the extension
+  code itself: added a missing `<client>site</client>` tag to the
+  `<update>` entry. Packages (like plugins) have `client_id = 0` in
+  `#__extensions`. Without an explicit `<client>` tag, Joomla's update
+  matching defaults to `client_id = 1` (administrator) and silently never
+  matches this package — the site fetches `updates.xml` successfully
+  (visible via an updated `last_check_timestamp`) but no update ever
+  appears under System → Update → Extensions, with no error anywhere.
+  Confirmed via `#__extensions.client_id = 0` for this package on a real
+  install where a companion plugin (which already had `<client>site</client>`)
+  updated correctly on the same server, ruling out network/hosting causes.
+
 ## 1.2.14
 - When saving `admin_language` to the profile fails, and Joomla's Debug
   System (`$app->get('debug')`) is enabled, the enqueued error message
