@@ -4,6 +4,17 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the module, the companion plugin, or just
 the package infrastructure changed).
 
+## 1.2.17
+- Documentation-only fix: corrected the "Show 'Default' option" field
+  description (en-GB + sk-SK). It previously said the reset option is
+  "shown only when a personal language is set" and called the target
+  "the site's default administrator language" — both imprecise. The
+  option is also shown for a *temporary* selection with no persisted
+  profile language (matching `hasCustomSelection()`'s actual logic since
+  1.2.8), and the reset target is Joomla's administrator default, not a
+  "site" setting (matching the terminology fix in 1.2.16). No functional
+  change.
+
 ## 1.2.16
 - Corrected the "Default" option's label text (was "Default (site
   setting)", now "Default (administrator setting)") — it resets to

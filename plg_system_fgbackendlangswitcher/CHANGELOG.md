@@ -4,6 +4,10 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the plugin, the module, or just the package
 infrastructure changed).
 
+## 1.2.17
+- No plugin change (version kept in sync with the package for a
+  description-text fix in the module).
+
 ## 1.2.16
 - **Important fix**: the "Default" option in **temporary** mode now
   resolves to Joomla's actual administrator default language
