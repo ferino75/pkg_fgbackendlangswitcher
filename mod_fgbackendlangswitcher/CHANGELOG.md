@@ -4,6 +4,14 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the module, the companion plugin, or just
 the package infrastructure changed).
 
+## 1.2.18
+- The "Default" switch confirmation message now also shows the resolved
+  language tag (e.g. "Default (administrator setting) → en-GB"), using
+  the same `com_languages` "administrator" param lookup added to the
+  plugin in 1.2.16 — purely for display; what actually gets stored
+  (cleared profile param in permanent mode, the marker in temporary mode)
+  is unchanged.
+
 ## 1.2.17
 - Documentation-only fix: corrected the "Show 'Default' option" field
   description (en-GB + sk-SK). It previously said the reset option is

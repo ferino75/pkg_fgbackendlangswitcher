@@ -4,6 +4,10 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the plugin, the module, or just the package
 infrastructure changed).
 
+## 1.2.18
+- No plugin change (version kept in sync with the package for a
+  confirmation-message UX improvement in the module).
+
 ## 1.2.17
 - No plugin change (version kept in sync with the package for a
   description-text fix in the module).

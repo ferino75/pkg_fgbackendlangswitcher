@@ -8,6 +8,7 @@
 namespace FG\Module\Fgbackendlangswitcher\Administrator\Helper;
 
 use Joomla\CMS\Application\AdministratorApplication;
+use Joomla\CMS\Component\ComponentHelper;
 use Joomla\CMS\Language\LanguageHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Log\Log;
@@ -188,6 +189,18 @@ class FgbackendlangswitcherHelper
             $newLang = $requested;
             $meta    = (array) ($installed[$requested]->metadata ?? []);
             $label   = ($meta['nativeName'] ?? $requested) . ' (' . $requested . ')';
+        } else {
+            // Čisto na zobrazenie v hlásení – nemení, čo sa reálne ukladá
+            // ($newLang zostáva '', do session ide marker ako doteraz).
+            // Rovnaké rozlíšenie ako v pluginovej logike (1.2.16): toto NIE
+            // JE $app->get('language') (site default), ale samostatné
+            // administrátorské nastavenie.
+            $resolvedTag = (string) ComponentHelper::getParams('com_languages')
+                ->get('administrator', $app->get('language'));
+
+            if ($resolvedTag !== '') {
+                $label .= ' → ' . $resolvedTag;
+            }
         }
 
         if ($persist) {
