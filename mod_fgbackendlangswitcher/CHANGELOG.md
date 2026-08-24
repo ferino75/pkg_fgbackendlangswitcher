@@ -4,6 +4,19 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the module, the companion plugin, or just
 the package infrastructure changed).
 
+## 1.2.20
+- New logo and JED-style banner (`assets/logo.png`, `assets/banner.png`,
+  1200×525), matching the established FG series banner layout: mark with
+  soft drop shadow, coral "FG" + white title, italic subtitle, coral
+  rule, four bullet points describing the actual features. The mark is a
+  "translate" pictogram — two overlapping rounded chips, "A" and "Č"
+  (Slovak diacritic), baked to vector path outlines (Instrument Sans, via
+  fontTools) rather than live SVG text, avoiding font-substitution
+  issues. Generation script included at `assets/make_banner.py`. README
+  now leads with the banner instead of the small standalone logo.
+  Replaces the swap-arrows icon design used in an earlier, never-released
+  draft of this version. Assets/docs only, no functional code change.
+
 ## 1.2.19
 - Documentation-only fix: the README version badge was a static,
   manually-typed number (stuck at 1.2.12 since the initial rebrand —

@@ -1,13 +1,10 @@
 <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#105060"/>
-      <stop offset="100%" stop-color="#1A6877"/>
+    <linearGradient id="markBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#081C30"/>
+      <stop offset="1" stop-color="#123A5C"/>
     </linearGradient>
   </defs>
-  <rect x="0" y="0" width="512" height="512" rx="115" ry="115" fill="url(#bgGrad)"/>
-  <path d="M 235.51 139.79 A 118 118 0 1 0 235.51 372.21" fill="none" stroke="#FF6B4A" stroke-width="30" stroke-linecap="round"/>
-  <path d="M 276.49 372.21 A 118 118 0 1 0 276.49 139.79" fill="none" stroke="#FF6B4A" stroke-width="30" stroke-linecap="round"/>
-  <polygon points="235.51,372.21 276.02,407.38 285.60,353.01" fill="#FF6B4A"/>
-  <polygon points="276.49,139.79 235.98,104.62 226.40,158.99" fill="#FF6B4A"/>
+  <rect x="10" y="10" width="492" height="492" rx="96" ry="96" fill="url(#markBlue)"/>
+  <g transform="rotate(-7 210 210)" opacity="0.25"><rect x="102.0" y="112.0" width="216.0" height="216.0" rx="36.7" ry="36.7" fill="#000000"/></g><g transform="rotate(-7 210 210)"><rect x="102.0" y="102.0" width="216.0" height="216.0" rx="36.7" ry="36.7" fill="#FFFFFF"/></g><g transform="rotate(-7 210 210) translate(154.80 264.00)" fill="#0E3A5C"><path d="M24 0 282 720H414L177 0ZM552 0 316 720H454L712 0ZM160 279H564V159H160Z" transform="translate(0.00 0.00) scale(0.15000 -0.15000)"/></g><g transform="rotate(7 305 305)" opacity="0.25"><rect x="197.0" y="207.0" width="216.0" height="216.0" rx="36.7" ry="36.7" fill="#000000"/></g><g transform="rotate(7 305 305)"><rect x="197.0" y="197.0" width="216.0" height="216.0" rx="36.7" ry="36.7" fill="#FF6B4A"/></g><g transform="rotate(7 305 305) translate(248.75 359.00)" fill="#FFFFFF"><path d="M391 -10Q313 -10 247.0 17.5Q181 45 132.5 95.0Q84 145 57.0 213.5Q30 282 30 363Q30 444 56.5 511.0Q83 578 131.5 627.5Q180 677 246.0 703.5Q312 730 391 730Q480 730 551.5 695.5Q623 661 668.5 598.5Q714 536 724 452H574Q561 529 511.0 568.5Q461 608 392 608Q331 608 284.5 579.0Q238 550 212.0 495.5Q186 441 186 364Q186 286 212.5 229.5Q239 173 286.0 142.5Q333 112 394 112Q459 112 509.0 151.0Q559 190 574 267H726Q713 183 667.0 120.5Q621 58 550.0 24.0Q479 -10 391 -10ZM307 793 181 950H306L447 823H323L464 950H589L463 793Z" transform="translate(0.00 0.00) scale(0.15000 -0.15000)"/></g>
 </svg>

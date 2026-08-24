@@ -4,6 +4,10 @@ Versions are kept in sync with the `pkg_fgbackendlangswitcher` package
 (even in a release where only the plugin, the module, or just the package
 infrastructure changed).
 
+## 1.2.20
+- No plugin change (version kept in sync with the package for the new
+  logo/banner assets).
+
 ## 1.2.19
 - No plugin change (version kept in sync with the package for a
   README badge fix).
